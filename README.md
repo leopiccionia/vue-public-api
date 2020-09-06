@@ -16,6 +16,8 @@ For a different, TypeScript-only, approach to the same problem, see my repo abou
 
 ## API
 
+The design is inspired by this [Vue RFC](https://github.com/vuejs/rfcs/pull/135).
+
 The POC exports a `useTemplateRefs` function, that can be used inside Composition API.
 
 The child component can contain an `expose` option, to specify the keys that'll be exposed in the public API. It can take three different shapes:
