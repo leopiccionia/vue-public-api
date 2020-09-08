@@ -22,9 +22,11 @@ function getTemplateRefProxy (templateRef, allowlist) {
 
   const handler = {
     get (target, key, receiver) {
-      return publicApi.has(key)
-        ? Reflect.get(target, publicApi.get(key), receiver)
-        : undefined
+      if (publicApi.has(key)) {
+        return Reflect.get(target, publicApi.get(key), receiver)
+      } else {
+        return undefined
+      }
     },
     has (target, key) {
       return publicApi.has(key)
