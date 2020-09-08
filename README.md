@@ -26,7 +26,7 @@ The child component can contain an `expose` option, to specify the keys that'll 
 * An object, where the keys are the external names and values are the internal names;
 * A Map, where the keys are the external names and values are the internal names.
 
-For compatibility, if `expose` option is not present, all keys are considered to be public. To lock the component, instead, use `expose: []`.
+For compatibility, if `expose` option is not present, all keys are considered to be public. To make the component opaque, instead, use `expose: []`.
 
 ```javascript
 import { onMounted, ref } from 'vue'
